@@ -1,0 +1,59 @@
+/* Styles généraux pour le header */
+.header {
+    background-color: black;
+    color: white;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .header-left {
+    margin-left: -250px; /* Supprime toute marge à gauche */
+  }
+  
+  .header-left .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    padding: 0;
+  }
+  
+  .header-right .nav-list {
+    list-style: none;
+    display: flex;
+    gap: 23px;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .header-right {
+    margin-right: -200px; /* Rapproche le menu de navigation à droite */
+  }
+  
+  .header-right .nav-list li a {
+    color: white;
+    text-decoration: none;
+    padding-bottom: 2px;
+    border-bottom: 2px solid transparent;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+  }
+  
+  /* Styles des liens actifs */
+  .nav-list li a.active-link {
+    color: #00bcd4;
+    border-bottom: 2px solid #00bcd4;
+  }
+  
+  .nav-list li a:hover {
+    color: #00bcd4;
+    border-bottom: 2px solid #00bcd4; /* Effet au survol */
+  }
+  

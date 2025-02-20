@@ -1,0 +1,110 @@
+/* Importation de la police Nunito Sans depuis Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600&display=swap');
+
+/* Applique la police "Nunito Sans" sur tout le corps du texte */
+body {
+  font-family: 'Nunito Sans', sans-serif;
+  font-weight: 400; /* Poids de 400 pour le texte standard */
+}
+
+/* Applique un poids de 600 pour les titres (h1, h2, etc.) */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600; /* Poids de 600 pour les titres */
+}
+
+/* Applique un poids de 600 pour les balises <strong> */
+strong {
+  font-weight: 600; /* Poids de 600 pour les éléments <strong> */
+}
+
+
+
+/* Style pour la section hero */
+.hero-section {
+  background-image: url('../assets/images/hero-bg.jpg'); /* Assure-toi que le chemin est correct */
+  background-size: cover;
+  background-position: center;
+  height: 100vh; /* Hauteur de la fenêtre */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  padding: 0 20px;
+}
+
+/* Conteneur pour le texte avec fond noir semi-transparent */
+.hero-image {
+  background-color: rgba(0, 0, 0, 0.85); /* Fond noir avec 70% d'opacité */
+  padding: 20px 30px;
+  border-radius: 5px;
+}
+
+/* Styles pour les titres dans la section hero */
+.hero-image h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+  color: white;
+}
+
+.hero-image h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: white;
+}
+
+/* Style pour le bouton dans la section hero */
+.hero-image button {
+  background-color: #007bff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.hero-image button:hover {
+  background-color: #0056b3;
+}
+
+/* Style pour la section "À propos" */
+.about-section {
+  padding: 50px 0;
+  background-color: #fff;
+  color: #333;
+}
+
+.about-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.about-section p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+/* Liste des compétences */
+.about-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.about-section li {
+  margin-bottom: 15px;
+}
+
+/* Personnalisation des barres de progression si besoin */
+.progress {
+  height: 20px;
+  background-color: #e9ecef;
+}
+
+.progress-bar {
+  font-size: 0.9rem;
+  line-height: 20px;
+}
