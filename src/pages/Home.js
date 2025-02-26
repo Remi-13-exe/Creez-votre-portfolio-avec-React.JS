@@ -30,44 +30,52 @@ const Home = () => {
         </div>
       </section>
 
-     {/* Présentation */}
-<section className="about-section">
-  <Container>
-    <Row>
-      {/* Colonne gauche : À propos de moi */}
-      <Col md={6}>
-      <h2 className="section-title">À propos de moi</h2>
-      <div className="about-image-container">
-          <img src={johnDoeImage} alt="John Doe" className="about-image" />
-        </div>
-        <p>
-          Je suis un développeur web en formation, passionné par la création de sites web
-          modernes et interactifs. J'ai des compétences en HTML, CSS, JavaScript, React et
-          bien plus.
-        </p>
-      </Col>
+      {/* Présentation */}
+      <section className="about-section">
+        <Container>
+          <Row>
+            {/* Colonne gauche : À propos de moi */}
+            <Col xs={12} md={6}>
+              <h2 className="section-title">À propos de moi</h2>
+              <div className="about-image-container">
+                <img src={johnDoeImage} alt="John Doe" className="about-image" />
+              </div>
+              <p>
+                Je suis un développeur web en formation, passionné par la création de sites web
+                modernes et interactifs. J'ai des compétences en HTML, CSS, JavaScript, React et
+                bien plus.
+              </p>
+            </Col>
 
-      {/* Colonne droite : Mes compétences */}
-      <Col md={6}>
-      <h2 className="section-title">Mes compétences</h2>
-      <ul>
-          <li>
-            <strong>HTML/CSS</strong>
-            <ProgressBar now={90} label="90%" />
-          </li>
-          <li>
-            <strong>JavaScript</strong>
-            <ProgressBar now={80} label="80%" />
-          </li>
-          <li>
-            <strong>React</strong>
-            <ProgressBar now={70} label="70%" />
-          </li>
-        </ul>
-      </Col>
-    </Row>
-  </Container>
-</section>
+            {/* Colonne droite : Mes compétences */}
+            <Col xs={12} md={6}>
+              <h2 className="section-title">Mes compétences</h2>
+              <ul className="skills-list">
+                <li>
+                  <strong>HTML5</strong>
+                  <ProgressBar now={90} className="progress-html" />
+                </li>
+                <li>
+                  <strong>CSS3</strong>
+                  <ProgressBar now={80} className="progress-css" />
+                </li>
+                <li>
+                  <strong>JavaScript</strong>
+                  <ProgressBar now={70} className="progress-js" />
+                </li>
+                <li>
+                  <strong>PHP</strong>
+                  <ProgressBar now={60} className="progress-php" />
+                </li>
+                <li>
+                  <strong>React</strong>
+                  <ProgressBar now={50} className="progress-react" />
+                </li>
+              </ul>
+            </Col>
+          </Row>
+        </Container>
+      </section>
 
       {/* Modale */}
       <Modal show={showModal} onHide={handleCloseModal} />

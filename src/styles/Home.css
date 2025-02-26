@@ -24,11 +24,30 @@ h2 {
 }
 
 /* Pour les titres */
+
+
 .section-title {
-  margin-bottom: 20px; /* Ajuste l'espace sous le titre */
-  text-align: left; /* Assure que les titres sont alignés à gauche (ou à centre si tu préfères) */
-  font-weight: bold; /* Optionnel, pour les rendre plus visibles */
+  text-align: left; /* Assure que les titres sont alignés à gauche */
+  margin-bottom: 40px; /* Espacement entre le titre et la barre */
+  font-weight: bold; /* Rendre le titre plus visible */
+  position: relative; /* Nécessaire pour positionner la barre avec précision */
 }
+
+.section-title::after {
+  content: '';
+  display: block;
+  width: 350px; /* Longueur exacte de la barre */
+  height: 4px; /* Épaisseur de la barre */
+  background-color: #0056b3; /* Couleur bleu foncé */
+  margin-top: 10px; /* Espacement sous le titre */
+  position: absolute;
+  bottom: -10px; /* Ajuste la position pour qu'elle soit proche du titre */
+  left: 0; /* Aligne la barre avec le début du texte */
+  border-radius: 2px; /* Coins arrondis (optionnel) */
+}
+
+
+
 
 /* Si tu veux garantir un espacement similaire pour tous les éléments */
 .about-section h2, 
@@ -123,13 +142,86 @@ h2 {
 }
 
 
-/* Personnalisation des barres de progression si besoin */
-.progress {
-  height: 20px;
-  background-color: #e9ecef;
+/* Liste des compétences */
+.skills-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
-.progress-bar {
-  font-size: 0.9rem;
-  line-height: 20px;
+.skills-list li {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
 }
+
+.skills-list strong {
+  width: 120px; /* Alignement uniforme pour tous les labels */
+  font-weight: bold;
+  color: #333; /* Couleur du texte */
+  text-transform: uppercase; /* Style en majuscules */
+}
+
+/* Barres de progression */
+.progress-bar {
+  border-radius: 5px; /* Coins arrondis */
+  height: 20px; /* Hauteur des barres */
+}
+
+.skills-list li .progress {
+  width: 100%; /* Barre pleine largeur */
+  max-width: 600px; /* Largeur maximale (par exemple) */
+  margin-left: 20px; /* Espacement entre le texte et la barre */
+}
+
+
+/* Couleurs spécifiques pour chaque compétence */
+.progress-html .progress-bar {
+  background-color: #e63946; /* Rouge pour HTML */
+}
+
+.progress-css .progress-bar {
+  background-color: #48cae4; /* Bleu clair pour CSS */
+}
+
+.progress-js .progress-bar {
+  background-color: #f4d35e; /* Jaune pour JavaScript */
+}
+
+.progress-php .progress-bar {
+  background-color: #1b998b; /* Vert pour PHP */
+}
+
+.progress-react .progress-bar {
+  background-color: #0077b6; /* Bleu pour React */
+}     
+
+
+
+/* Sur tablette (max-width: 1024px), garder les sections côte à côte */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .about-section .container .row {
+    flex-direction: row; /* Les colonnes restent côte à côte */
+    gap: 20px; /* Espacement entre les colonnes */
+  }
+
+  .section-title {
+    font-size: 2rem; /* Ajuster la taille du titre */
+  }
+
+  .progress-bar {
+    width: 90%;
+  }
+}
+
+/* Sur desktop (min-width: 1025px), garder la disposition standard */
+@media (min-width: 1025px) {
+  .about-section .container .row {
+    flex-direction: row; /* Les colonnes restent côte à côte */
+  }
+
+  .section-title {
+    font-size: 2.5rem; /* Taille de titre pour desktop */
+  }
+}
+

@@ -1,59 +1,135 @@
-/* Styles généraux pour le header */
+/* Style de base pour le header */
 .header {
-    background-color: black;
-    color: white;
-    padding: 10px 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .header .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-  }
-  
-  .header-left {
-    margin-left: -250px; /* Supprime toute marge à gauche */
-  }
-  
-  .header-left .logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: white;
-    padding: 0;
-  }
-  
-  .header-right .nav-list {
-    list-style: none;
-    display: flex;
-    gap: 23px;
-    margin: 0;
-    padding: 0;
-  }
-  
+  background-color: black;
+  color: white;
+  padding: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+/* Logo */
+.header-left .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+}
+
+/* Menu Burger */
+.burger-menu {
+  display: none;
+  background: none;
+  border: none;
+  flex-direction: column;
+  cursor: pointer;
+  padding: 5px;
+}
+
+.burger-icon {
+  width: 30px;
+  height: 5px;
+  background-color: white;
+  margin: 5px 0;
+}
+
+/* Menu de navigation */
+.nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  gap: 23px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-list li a {
+  color: white;
+  text-decoration: none;
+  padding-bottom: 2px;
+  border-bottom: 2px solid transparent;
+  transition: color 0.3s ease, border-bottom 0.3s ease;
+}
+
+.nav-list li a:hover {
+  color: #00bcd4;
+  border-bottom: 2px solid #00bcd4;
+}
+
+/* Quand le menu est ouvert sur mobile */
+.nav.open {
+  display: block;
+}
+
+.nav-list li {
+  margin: 10px 0;
+}
+
+/* Styles pour tablette et mobile */
+@media (max-width: 1024px) {
   .header-right {
-    margin-right: -200px; /* Rapproche le menu de navigation à droite */
+    display: flex;
+    align-items: center;
   }
-  
-  .header-right .nav-list li a {
-    color: white;
-    text-decoration: none;
-    padding-bottom: 2px;
-    border-bottom: 2px solid transparent;
-    transition: color 0.3s ease, border-bottom 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  /* Cacher le menu de navigation sur mobile et afficher le burger */
+  .nav {
+    display: none;
   }
-  
-  /* Styles des liens actifs */
-  .nav-list li a.active-link {
-    color: #00bcd4;
-    border-bottom: 2px solid #00bcd4;
+
+  .burger-menu {
+    display: flex; /* Affiche le burger menu */
   }
-  
-  .nav-list li a:hover {
-    color: #00bcd4;
-    border-bottom: 2px solid #00bcd4; /* Effet au survol */
+
+  /* Quand le menu est ouvert */
+  .nav.open {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: black;
+    padding: 20px;
+    z-index: 999;
+    display: block;
   }
-  
+
+  .nav-list {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+
+  .nav-list li a {
+    font-size: 1.2rem;
+  }
+}
+
+/* Pour les tablettes, un peu plus compressé */
+@media (max-width: 1024px) {
+  .header .container {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 10px;
+  }
+
+  .header-left .logo {
+    font-size: 1.4rem;
+  }
+
+  .nav-list {
+    gap: 15px;
+  }
+}
