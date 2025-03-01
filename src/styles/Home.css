@@ -1,148 +1,97 @@
-/* Importation de la police Nunito Sans depuis Google Fonts */
+/* Importation de la police Nunito Sans */
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600&display=swap');
 
-/* Applique la police "Nunito Sans" sur tout le corps du texte */
+/* Style global */
 body {
   font-family: 'Nunito Sans', sans-serif;
-  font-weight: 400; /* Poids de 400 pour le texte standard */
+  font-weight: 400;
 }
 
-/* Applique un poids de 600 pour les titres (h1, h2, etc.) */
 h1, h2, h3, h4, h5, h6 {
-  font-weight: 600; /* Poids de 600 pour les titres */
+  font-weight: 600;
 }
 
-
-
-/* Applique un poids de 600 pour les balises <strong> */
-strong {
-  font-weight: 600; /* Poids de 600 pour les éléments <strong> */
-}
-
-h2 {
-  margin-bottom: 30px; /* Espacement sous les titres pour aérer */
-}
-
-/* Pour les titres */
-
-
-.section-title {
-  text-align: left; /* Assure que les titres sont alignés à gauche */
-  margin-bottom: 40px; /* Espacement entre le titre et la barre */
-  font-weight: bold; /* Rendre le titre plus visible */
-  position: relative; /* Nécessaire pour positionner la barre avec précision */
-}
-
-.section-title::after {
-  content: '';
-  display: block;
-  width: 350px; /* Longueur exacte de la barre */
-  height: 4px; /* Épaisseur de la barre */
-  background-color: #0056b3; /* Couleur bleu foncé */
-  margin-top: 10px; /* Espacement sous le titre */
-  position: absolute;
-  bottom: -10px; /* Ajuste la position pour qu'elle soit proche du titre */
-  left: 0; /* Aligne la barre avec le début du texte */
-  border-radius: 2px; /* Coins arrondis (optionnel) */
-}
-
-
-
-
-/* Si tu veux garantir un espacement similaire pour tous les éléments */
-.about-section h2, 
-.about-section h3 {
-  margin-bottom: 20px;
-}
-
-
-/* Style pour la section hero */
+/* Hero Section */
 .hero-section {
-  background-image: url('../assets/images/hero-bg.jpg'); /* Assure-toi que le chemin est correct */
+  background-image: url('../assets/images/hero-bg.jpg');
   background-size: cover;
   background-position: center;
-  height: 100vh; /* Hauteur de la fenêtre */
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-  position: relative;
-  padding: 0 20px;
 }
 
-/* Conteneur pour le texte avec fond noir semi-transparent */
 .hero-image {
-  background-color: rgba(0, 0, 0, 0.85); /* Fond noir avec 70% d'opacité */
+  background-color: rgba(0, 0, 0, 0.85);
   padding: 20px 30px;
   border-radius: 5px;
 }
 
-/* Styles pour les titres dans la section hero */
 .hero-image h1 {
   font-size: 3rem;
-  margin-bottom: 0.5rem;
   color: white;
 }
 
 .hero-image h2 {
   font-size: 2rem;
-  margin-bottom: 1.5rem;
   color: white;
 }
 
-/* Style pour le bouton dans la section hero */
 .hero-image button {
   background-color: #007bff;
-  border: none;
   padding: 10px 20px;
-  font-size: 1rem;
   color: white;
+  border: none;
   border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
 }
 
 .hero-image button:hover {
   background-color: #0056b3;
 }
 
-/* Style pour la section "À propos" */
+/* Encadré autour des colonnes */
+.encadre {
+  border: 2px solid #ddd; /* Bordure de l'encadré */
+  padding: 20px; /* Espacement à l'intérieur de l'encadré */
+  border-radius: 10px; /* Coins arrondis */
+  background-color: #fff; /* Couleur de fond */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre pour l'encadré */
+}
+
+/* À propos Section */
 .about-section {
   padding: 50px 0;
-  background-color: #fff;
-  color: #333;
+  background-color: #f9f9f9;
 }
 
-.about-section h2 {
-  font-size: 2.5rem;
-  margin-bottom: 80px;
+.about-row {
+  display: flex;
+  align-items: stretch; /* Assure que les colonnes aient la même hauteur */
+  justify-content: space-between; /* Aligne horizontalement */
+  gap: 40px; /* Ajoute un espacement horizontal entre les colonnes */
 }
 
-.about-section p {
-  font-size: 1.2rem;
-  line-height: 1.6;
+.about-col {
+  flex: 1; /* Assure que les colonnes prennent un espace égal */
+  min-width: 280px;
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: left; /* Aligne le texte à gauche */
+}
+
+.about-image-container {
   margin-bottom: 20px;
-}
-
-/* Liste des compétences */
-.about-section ul {
-  list-style: none;
-  padding: 0;
-}
-
-.about-section li {
-  margin-bottom: 15px;
 }
 
 .about-image {
   max-width: 100%;
-  height: auto;
-  border-radius: 10px;
 }
 
-
-/* Liste des compétences */
 .skills-list {
   list-style: none;
   padding: 0;
@@ -150,78 +99,77 @@ h2 {
 }
 
 .skills-list li {
-  margin-bottom: 20px;
+  margin-bottom: 15px;
   display: flex;
   align-items: center;
 }
 
 .skills-list strong {
-  width: 120px; /* Alignement uniforme pour tous les labels */
-  font-weight: bold;
-  color: #333; /* Couleur du texte */
-  text-transform: uppercase; /* Style en majuscules */
+  width: 150px; /* Uniformité pour les labels */
+  text-transform: uppercase;
 }
 
-/* Barres de progression */
 .progress-bar {
-  border-radius: 5px; /* Coins arrondis */
-  height: 20px; /* Hauteur des barres */
+  border-radius: 5px;
+  height: 20px;
 }
 
-.skills-list li .progress {
-  width: 100%; /* Barre pleine largeur */
-  max-width: 600px; /* Largeur maximale (par exemple) */
+.progress {
+  width: 100%; /* Barre de progression pleine largeur */
+  max-width: 600px;
   margin-left: 20px; /* Espacement entre le texte et la barre */
 }
 
-
-/* Couleurs spécifiques pour chaque compétence */
+/* Couleurs spécifiques des barres */
 .progress-html .progress-bar {
-  background-color: #e63946; /* Rouge pour HTML */
+  background-color: #e63946;
 }
 
 .progress-css .progress-bar {
-  background-color: #48cae4; /* Bleu clair pour CSS */
+  background-color: #48cae4;
 }
 
 .progress-js .progress-bar {
-  background-color: #f4d35e; /* Jaune pour JavaScript */
+  background-color: #f4d35e;
 }
 
 .progress-php .progress-bar {
-  background-color: #1b998b; /* Vert pour PHP */
+  background-color: #1b998b;
 }
 
 .progress-react .progress-bar {
-  background-color: #0077b6; /* Bleu pour React */
-}     
-
-
-
-/* Sur tablette (max-width: 1024px), garder les sections côte à côte */
-@media (min-width: 769px) and (max-width: 1024px) {
-  .about-section .container .row {
-    flex-direction: row; /* Les colonnes restent côte à côte */
-    gap: 20px; /* Espacement entre les colonnes */
-  }
-
-  .section-title {
-    font-size: 2rem; /* Ajuster la taille du titre */
-  }
-
-  .progress-bar {
-    width: 90%;
-  }
+  background-color: #0077b6;
 }
 
-/* Sur desktop (min-width: 1025px), garder la disposition standard */
-@media (min-width: 1025px) {
-  .about-section .container .row {
-    flex-direction: row; /* Les colonnes restent côte à côte */
-  }
-
-  .section-title {
-    font-size: 2.5rem; /* Taille de titre pour desktop */
-  }
+/* Barre sous les titres */
+.section-title {
+  text-align: left;
+  margin-bottom: 40px;
+  font-weight: bold;
+  position: relative;
 }
 
+.section-title::after {
+  content: '';
+  display: block;
+  width: 100%; /* Par défaut, occupe toute la largeur disponible */
+  max-width: 36.44rem; /* Largeur maximale (environ 583px) */
+  height: 4px;
+  background-color: #0080ff; /* Bleu plus foncé et dynamique */
+  margin-top: 10px; /* Espacement sous le titre */
+  position: absolute;
+  bottom: -10px;
+  left: 0; /* Aligne avec le début du titre */
+  border-radius: 2px; /* Coins arrondis */
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+  .about-row {
+    flex-direction: column; /* Empile les colonnes sur les petits écrans */
+  }
+  
+  .section-title::after {
+    max-width: 20rem; /* Réduit la largeur pour les écrans plus petits */
+  }
+}

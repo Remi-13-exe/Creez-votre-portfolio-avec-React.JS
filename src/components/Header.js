@@ -28,8 +28,8 @@ const Header = () => {
           {/* Navigation (affiche seulement si le menu est ouvert) */}
           <nav className={`nav ${menuOpen ? 'open' : ''}`}>
             <ul className="nav-list">
-              <li><Link to="/home">Home</Link></li>
-              <li><Link to="/services">Services</Link></li>
+              <li><Link to="/">Home</Link></li>
+              <li><Link to="/Services">Services</Link></li>
               <li><Link to="/portfolio">Portfolio</Link></li>
               <li><Link to="/contact">Contact</Link></li>
               <li><Link to="/mentions-legales">Mentions légales</Link></li>

@@ -1,0 +1,151 @@
+/* styles/services.css */
+
+.services {
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+.banner {
+  position: relative;
+  text-align: center;
+  margin-bottom: 180px; /* Espace entre l'image et le contenu */
+}
+
+.banner-image {
+  width: 100%;
+  height: auto;
+}
+
+.banner-title {
+  font-size: 2.5rem; /* Taille du titre */
+  color: #000; /* Couleur noire */
+  margin-top: 60px; /* Ajoute un peu d'espace avec l'image */
+  text-align: center; /* Centre le texte */
+  font-weight: bold; /* Texte très gras */
+}
+
+.banner p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 55px;
+}
+
+.banner-bar {
+  width: 560px; /* Largeur de la barre */
+  height: 6px; /* Hauteur de la barre */
+  background-color: #0e6efd; /* Couleur bleue dynamique */
+  margin: 20px auto 0; /* Centre horizontalement et ajoute un peu d'espace en haut */
+}
+
+.services-container {
+  padding: 20px 15px;
+}
+
+.row {
+  display: flex; /* Utilise flexbox pour aligner les colonnes sur une ligne */
+  gap: 20px; /* Espacement entre les colonnes */
+  justify-content: space-between; /* Assure que les colonnes prennent tout l'espace disponible */
+  flex-wrap: wrap; /* Permet aux colonnes de s'enrouler si l'écran est trop petit */
+  margin-bottom: 55px;
+}
+
+.service-column {
+  text-align: center;
+  padding: 35px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  flex: 1; /* Assure que les colonnes prennent un espace égal */
+  min-width: 280px; /* Assure qu'elles ne deviennent pas trop petites sur des écrans étroits */
+}
+
+.service-title {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #000; /* Couleur noire */
+  font-weight: bold;
+}
+
+.service-column p {
+  font-size: 1rem;
+  color: #555;
+}
+
+.service-icon {
+  color: #0e6efd; /* Couleur bleue dynamique */
+  margin-bottom: 10px; /* Espacement sous l'icône */
+}
+
+/* Responsiveness */
+@media (max-width: 1200px) {
+  .banner-title {
+    font-size: 2rem;
+  }
+  
+  .banner-bar {
+    width: 400px;
+  }
+
+  .service-title {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .banner-title {
+    font-size: 1.8rem;
+  }
+
+  .banner-bar {
+    width: 300px;
+  }
+
+  .service-title {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .banner {
+    margin-bottom: 100px;
+  }
+
+  .banner-title {
+    font-size: 1.6rem;
+  }
+
+  .banner-bar {
+    width: 250px;
+  }
+
+  .service-title {
+    font-size: 1.2rem;
+  }
+
+  .row {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .service-column {
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .banner-title {
+    font-size: 1.4rem;
+  }
+
+  .banner-bar {
+    width: 200px;
+  }
+
+  .service-title {
+    font-size: 1.1rem;
+  }
+
+  .service-column {
+    margin-bottom: 20px;
+  }
+}
