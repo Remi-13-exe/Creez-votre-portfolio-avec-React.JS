@@ -1,5 +1,51 @@
 /* styles/services.css */
+.service-card:hover {
+  background-color: #efefef;
+  box-shadow: 0 8px 10px rgba(0, 0, 0, 0.2);
+}
 
+.service-card {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centre verticalement tous les éléments */
+  align-items: center; /* Centre horizontalement tous les éléments */
+  border: 1px solid #eee; /* Éclaircir les bordures */
+  padding: 20px;
+}
+
+.service-icon {
+  color: #0e6efd; /* Couleur bleue dynamique */
+  margin-bottom: 50px; /* Espacement sous l'icône */
+  font-size: 2rem; /* Taille ajustée pour rendre les icônes moins grasses */
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.service-title {
+  text-align: center; /* Centre le titre */
+  margin: 10px 0; /* Ajoute un peu d'espace au-dessus et en dessous */
+}
+
+.service-column p {
+  text-align: center; /* Centre les paragraphes */
+}
+
+/* Ajouter des règles de style pour garantir l'alignement horizontal */
+@media (min-width: 768px) {
+  .row {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 15px; /* Rapprocher les colonnes */
+  }
+
+  .service-card {
+    margin: 10px;
+  }
+}
+
+/* Autres règles de style déjà présentes */
 .services {
   font-family: 'Nunito Sans', sans-serif;
 }
@@ -37,15 +83,7 @@
 }
 
 .services-container {
-  padding: 20px 15px;
-}
-
-.row {
-  display: flex; /* Utilise flexbox pour aligner les colonnes sur une ligne */
-  gap: 20px; /* Espacement entre les colonnes */
-  justify-content: space-between; /* Assure que les colonnes prennent tout l'espace disponible */
-  flex-wrap: wrap; /* Permet aux colonnes de s'enrouler si l'écran est trop petit */
-  margin-bottom: 55px;
+  padding: 70px 10px;
 }
 
 .service-column {
@@ -69,11 +107,6 @@
 .service-column p {
   font-size: 1rem;
   color: #555;
-}
-
-.service-icon {
-  color: #0e6efd; /* Couleur bleue dynamique */
-  margin-bottom: 10px; /* Espacement sous l'icône */
 }
 
 /* Responsiveness */
