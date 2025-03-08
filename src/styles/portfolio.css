@@ -1,0 +1,130 @@
+/* Global styles */
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Nunito Sans', sans-serif;
+  background-color: #f9f9f9;
+}
+
+
+
+
+/* Cartes de projet */
+.project-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px; /* Coins arrondis */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Conteneur des images */
+.project-card .position-relative {
+  height: 400px; /* Taille des images */
+  overflow: hidden;
+  border-radius: 8px; /* Coins arrondis */
+}
+
+.project-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Image centrée sans déformation */
+}
+
+/* Titres et texte */
+.project-card .card-title {
+  font-size: 1.6rem; /* Agrandi légèrement */
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.project-card .card-text {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Bouton primaire */
+.project-card .btn-primary {
+  background-color: #0e6efd;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  font-size: 1rem;
+  text-align: center;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+
+.project-card .btn-primary:hover {
+  background-color: #0056b3;
+}
+
+/* Sous-cadre pour les technologies utilisées */
+.created-with {
+  background-color: #e9ecef; /* Fond gris clair */
+  border-radius: 6px; /* Coins arrondis */
+  padding: 12px;
+  margin-top: 15px;
+  font-size: 0.9rem;
+  color: #555;
+  text-align: center; /* Texte centré */
+  border: 1px solid #ced4da; /* Bordure propre */
+}
+
+/* Espacement entre les lignes */
+.mb-4 {
+  margin-bottom: 20px;
+}
+.mb-5 {
+  margin-bottom: 40px;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+  .banner-title {
+    font-size: 2.2rem;
+  }
+  .banner-bar {
+    width: 100px;
+  }
+  .project-card .card-title {
+    font-size: 1.4rem;
+  }
+  .project-card img {
+    height: 300px; /* Réduction pour écrans moyens */
+  }
+}
+
+@media (max-width: 576px) {
+  .banner {
+    padding: 30px 10px;
+  }
+  .banner-title {
+    font-size: 1.8rem;
+  }
+  .banner-bar {
+    width: 80px;
+  }
+  .portfolio-container {
+    padding: 20px 10px;
+  }
+  .project-card img {
+    height: 250px; /* Réduction pour petits écrans */
+  }
+  .project-card .btn-primary {
+    font-size: 0.9rem;
+    padding: 8px 12px;
+  }
+}

@@ -1,75 +1,128 @@
+/* Styles globaux */
 .mentions-legales {
-    font-family: 'Nunito Sans', sans-serif;
-    padding: 40px 15px;
-    background-color: #f9f9f9;
-  }
+  font-family: 'Nunito Sans', sans-serif;
+  padding: 40px 15px;
+  background-color: #f9f9f9;
+}
 
+h2 {
+  font-weight: bold; /* Assure que le titre est bien en gras */
+}
 
-  h2 {
+.mentions-title {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 30px;
+}
 
-    font-weight: bold; /* Assure que le titre est bien en gras */
+.mentions-accordion .accordion-header {
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #007bff; /* Couleur bleue pour le header */
+}
 
+.mentions-accordion .accordion-body {
+  font-size: 1rem;
+  color: #555; /* Texte gris pour une meilleure lisibilité */
+}
 
-  }
-  
+.legal-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #000;
+  text-align: center;
+  margin: 40px 0;
+}
+
+.legal-accordion {
+  margin-top: 70px; /* Espace entre le titre et l'accordéon */
+}
+
+.footer-spacing {
+  margin-top: 110px; /* Ajoute un espace avant le footer */
+}
+
+.banner-bar {
+  width: 560px; /* Largeur de la barre */
+  height: 6px; /* Hauteur de la barre */
+  background-color: #0e6efd; /* Couleur bleue dynamique */
+  margin: 20px auto 0;
+}
+
+body, html {
+  height: 100%; /* Assure que la page couvre toute la hauteur */
+  margin: 0;
+}
+
+.legal {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* La page doit occuper toute la hauteur */
+}
+
+.legal-content {
+  flex: 1; /* Permet au contenu principal de s'étendre */
+}
+
+.legal-section {
+  margin-bottom: 20px;
+}
+
+footer {
+  margin-top: auto;
+}
+
+/* Media Queries pour rendre la page responsive */
+@media (max-width: 1200px) {
   .mentions-title {
-    text-align: center;
-    font-size: 2.5rem;
-    font-weight: bold; /* Assure que le titre est bien en gras */
-    color: #333;
-    margin-bottom: 30px;
-  }
-  
-  .mentions-accordion .accordion-header {
-    font-weight: bold;
-    font-size: 1.2rem;
-    color: #007bff; /* Couleur bleue pour le header */
-  }
-  
-  .mentions-accordion .accordion-body {
-    font-size: 1rem;
-    color: #555; /* Texte gris pour une meilleure lisibilité */
-  }
-  
-  .legal-title {
-    font-size: 2.5rem;
-    font-weight: bold;
-    color: #000;
-    text-align: center;
-    margin: 40px 0;
-  }
-  
-  .legal-accordion {
-    margin-top: 70px; /* Espace entre le titre et l'accordéon */
-  }
-  
-  .footer-spacing {
-    margin-top: 110px; /* Ajoute un espace avant le footer */
+    font-size: 2rem;
   }
   
   .banner-bar {
-    width: 560px; /* Largeur de la barre */
-    height: 6px; /* Hauteur de la barre */
-    background-color: #0e6efd; /* Couleur bleue dynamique */
-    margin: 20px auto 0; /* Centre horizontalement avec espace */
+    width: 400px;
+  }
+}
+
+@media (max-width: 992px) {
+  .mentions-title {
+    font-size: 1.8rem;
   }
   
-  body, html {
-    height: 100%; /* Assure que la page couvre toute la hauteur de l'écran */
-    margin: 0;
+  .mentions-accordion .accordion-header {
+    font-size: 1.1rem;
+  }
+  
+  .banner-bar {
+    width: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  .mentions-title {
+    font-size: 1.6rem;
   }
   
   .legal {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh; /* La page doit occuper toute la hauteur */
+    padding: 30px 10px; /* Ajuste les marges sur petit écran */
   }
   
-  .legal-content {
-    flex: 1; /* Permet au contenu principal de s'étendre */
+  .banner-bar {
+    width: 250px;
+  }
+}
+
+@media (max-width: 576px) {
+  .mentions-title {
+    font-size: 1.4rem;
   }
   
-  footer {
-    margin-top: auto; /* Colle le footer en bas de la page */
+  .banner-bar {
+    width: 200px;
   }
   
+  .footer-spacing {
+    margin-top: 60px; /* Réduit l'espace au-dessus du footer sur les petits écrans */
+  }
+}
