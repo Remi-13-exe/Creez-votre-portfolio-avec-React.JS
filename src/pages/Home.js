@@ -1,15 +1,14 @@
-import React, { useState } from 'react';
-import { Button, Container, Row, Col, ProgressBar } from 'react-bootstrap';
-import Header from '../components/Header'; // Importation du Header
-import Modal from '../components/Modal'; // Assure-toi que ce composant existe
-import '../styles/Home.css'; // Chemin vers le fichier CSS personnalisé
-import Footer from '../components/Footer';
-import johnDoeImage from '../assets/images/john-doe-about.jpg';
+import React, { useState } from "react";
+import { Button, Container, Row, Col, ProgressBar } from "react-bootstrap";
+import Header from "../components/Header";
+import GithubModal from "../components/Modal";
+import "../styles/Home.css";
+import Footer from "../components/Footer";
+import johnDoeImage from "../assets/images/john-doe-about.jpg";
 
 const Home = () => {
   const [showModal, setShowModal] = useState(false);
 
-  // Fonction pour afficher/fermer la modale
   const handleShowModal = () => setShowModal(true);
   const handleCloseModal = () => setShowModal(false);
 
@@ -78,7 +77,7 @@ const Home = () => {
       </section>
 
       {/* Modale */}
-      <Modal show={showModal} onHide={handleCloseModal} />
+      <GithubModal show={showModal} onHide={handleCloseModal} />
 
       <Footer />
     </div>

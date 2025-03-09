@@ -1,0 +1,85 @@
+
+  
+  .banner-title {
+    font-size: 2.8rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .banner-bar {
+    width: 560px;
+    height: 6px;
+    background-color: #0e6efd;
+    margin: 15px auto 0;
+  }
+
+
+  /* Espacement spécifique après la banner-bar */
+.contact-form .banner-bar,
+.contact-info .banner-bar {
+  margin: 20px 0; /* Espace vertical (10px en haut et en bas) */
+  margin-bottom: 60px;
+  height: 5px;
+
+}
+  
+  .banner p {
+    font-size: 1.2rem;
+    margin-top: 10px;
+  }
+  
+  /* Conteneur principal */
+/* Conteneur principal avec ombre */
+/* Conteneur principal avec une ombre plus expressive */
+.contact-container {
+    padding: 40px 15px;
+    background: #ffffff; /* Fond blanc */
+    border-radius: 8px; /* Coins arrondis */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Ombre plus marquée */
+    margin-bottom: 50px; /* Espacement avec le footer */
+  }
+ 
+  /* Formulaire */
+  .contact-form h2 {
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+    color: #333;
+  }
+  
+  .contact-form label {
+    font-weight: bold;
+    color: #555;
+  }
+  
+  .contact-form .form-control {
+    margin-bottom: 15px;
+    border-radius: 6px;
+  }
+  
+  /* Coordonnées */
+  .contact-info h2 {
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+    color: #333;
+  }
+  
+  .contact-info p {
+    margin: 5px 0;
+    font-size: 1rem;
+    color: #555;
+  }
+  
+  .map-container iframe {
+    margin-top: 15px;
+    border-radius: 6px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+
+
+   
+  /* Footer espacé du conteneur */
+  footer {
+    margin-top: 20px; /* Ajout d’un espace pour la lisibilité */
+  }
+  

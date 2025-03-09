@@ -3,6 +3,7 @@ import Home from "./pages/Home";
 import Services from "./pages/Services";
 import Portfolio from "./pages/Portfolio";
 import Legal from "./pages/Legal";
+import Contact from "./pages/Contact";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Route path="*" element={<div>404 - Page introuvable</div>} /> {/* Route pour les pages non trouvées */}
         <Route path="/portfolio" element={<Portfolio />} /> {/* Route pour les services */}
         <Route path="/legal" element={<Legal />} /> {/* Route pour les services */}
+        <Route path="/contact" element={<Contact />} /> {/* Route pour les services */}
 
       </Routes>
     </Router>

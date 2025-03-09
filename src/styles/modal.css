@@ -1,0 +1,70 @@
+/* Thème sombre */
+.dark-modal .modal-content {
+    background-color: #1c1c1c;
+    color: #d3d3d3;
+    border-radius: 8px;
+  }
+  
+  /* Conteneur des colonnes */
+  .github-modal-content {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Espace entre les colonnes */
+    flex-wrap: wrap; /* Permet à la photo et au texte de se superposer en responsive */
+  }
+  
+  /* Colonne gauche : Photo de profil */
+  .github-avatar-wrapper {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .github-avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 3px solid #444;
+  }
+  
+  /* Colonne droite : Informations */
+  .github-info-wrapper {
+    flex: 2;
+  }
+  
+  .github-info-wrapper h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .github-link {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #444;
+    color: #d3d3d3;
+    text-decoration: none;
+    border-radius: 4px;
+  }
+  
+  .github-link:hover {
+    background-color: #333;
+    text-decoration: none;
+  }
+  
+  /* Responsive : photo superposée en mode mobile */
+  @media (max-width: 768px) {
+    .github-modal-content {
+      flex-direction: column; /* Passe en mode colonne */
+      text-align: center;
+    }
+  
+    .github-avatar-wrapper {
+      margin-bottom: 15px; /* Espace entre la photo et le texte */
+    }
+  
+    .github-info-wrapper {
+      text-align: center;
+    }
+  }
+  

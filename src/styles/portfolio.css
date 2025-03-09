@@ -41,6 +41,16 @@ html {
   object-fit: cover; /* Image centrée sans déformation */
 }
 
+
+/* Centrer le contenu dans le Card.Body */
+.project-card .card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centre verticalement */
+  align-items: center; /* Centre horizontalement */
+}
+
+
 /* Titres et texte */
 .project-card .card-title {
   font-size: 1.6rem; /* Agrandi légèrement */
