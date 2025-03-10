@@ -3,6 +3,8 @@ import { Container, Row, Col, Form, Button } from "react-bootstrap";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import "../styles/contact.css";
+import { faMapPin, faMapMarkedAlt, faPhoneAlt, faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Contact = () => {
   return (
@@ -64,12 +66,18 @@ const Contact = () => {
             <div className="banner-bar"></div>
 
             <p>
-              <strong>Nom :</strong> John Doe
+              <FontAwesomeIcon icon={faMapPin} className="icon" /> 40 rue Laure Diebold
             </p>
-            <p>40 rue Laure Diebold</p>
-            <p>69009 Lyon, France</p>
-            <p>10 20 30 40 50 </p>
-            <p>john.doe@gmail.com</p>
+            <p>
+              <FontAwesomeIcon icon={faMapMarkedAlt} className="icon" /> 69009 Lyon, France
+            </p>
+            <p>
+              <FontAwesomeIcon icon={faPhoneAlt} className="icon" /> 10 20 30 40 50
+            </p>
+            <p>
+              <FontAwesomeIcon icon={faEnvelope} className="icon" /> john.doe@gmail.com
+            </p>
+
             <div className="map-container">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5565.2539315082095!2d4.796403976619983!3d45.7786657124015!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47f4eb65edac5b3f%3A0xe01c47049cb2e2b9!2s40%20Rue%20Laure%20Diebold%2C%2069009%20Lyon!5e0!3m2!1sfr!2sfr!4v1741529245379!5m2!1sfr!2sfr"

@@ -3,41 +3,41 @@
     background-color: #1c1c1c;
     color: #d3d3d3;
     border-radius: 8px;
-  }
-  
-  /* Conteneur des colonnes */
-  .github-modal-content {
+}
+
+/* Conteneur des colonnes */
+.github-modal-content {
     display: flex;
     align-items: center;
     gap: 20px; /* Espace entre les colonnes */
     flex-wrap: wrap; /* Permet à la photo et au texte de se superposer en responsive */
-  }
-  
-  /* Colonne gauche : Photo de profil */
-  .github-avatar-wrapper {
+}
+
+/* Colonne gauche : Photo de profil */
+.github-avatar-wrapper {
     flex: 1;
     display: flex;
     justify-content: center;
-  }
-  
-  .github-avatar {
-    width: 120px;
-    height: 120px;
+}
+
+.github-avatar {
+    width: 150px; /* Agrandit la photo */
+    height: 150px; /* Agrandit la photo */
     border-radius: 50%;
     border: 3px solid #444;
-  }
-  
-  /* Colonne droite : Informations */
-  .github-info-wrapper {
+}
+
+/* Colonne droite : Informations */
+.github-info-wrapper {
     flex: 2;
-  }
-  
-  .github-info-wrapper h3 {
-    font-size: 1.5rem;
+}
+
+.github-info-wrapper h3 {
+    font-size: 1.6rem; /* Ajustement de la taille des titres */
     margin-bottom: 10px;
-  }
-  
-  .github-link {
+}
+
+.github-link {
     display: inline-block;
     margin-top: 15px;
     padding: 10px 20px;
@@ -45,26 +45,55 @@
     color: #d3d3d3;
     text-decoration: none;
     border-radius: 4px;
-  }
-  
-  .github-link:hover {
+}
+
+.github-link:hover {
     background-color: #333;
     text-decoration: none;
-  }
-  
-  /* Responsive : photo superposée en mode mobile */
-  @media (max-width: 768px) {
+}
+
+/* Responsive : styles pour tablette */
+@media (max-width: 1024px) {
     .github-modal-content {
-      flex-direction: column; /* Passe en mode colonne */
-      text-align: center;
+        flex-direction: row; /* Colonne gauche et droite restent côte à côte */
+        gap: 15px; /* Espacement plus réduit entre la photo et les infos */
     }
-  
+
+    .github-avatar {
+        width: 180px; /* Agrandit encore la photo pour tablette */
+        height: 180px;
+    }
+
+    .github-info-wrapper h3 {
+        font-size: 1.4rem; /* Réduction légère du texte pour tablette */
+    }
+
+    .github-link {
+        padding: 8px 18px; /* Ajuste les dimensions du bouton */
+    }
+}
+
+/* Responsive : photo superposée en mode mobile */
+@media (max-width: 768px) {
+    .github-modal-content {
+        flex-direction: column; /* Passe en mode colonne */
+        text-align: center;
+    }
+
     .github-avatar-wrapper {
-      margin-bottom: 15px; /* Espace entre la photo et le texte */
+        margin-bottom: 15px; /* Espace entre la photo et le texte */
     }
-  
+
+    .github-avatar {
+        width: 140px; /* Taille réduite pour mobile */
+        height: 140px;
+    }
+
     .github-info-wrapper {
-      text-align: center;
+        text-align: center;
     }
-  }
-  
+
+    .github-info-wrapper h3 {
+        font-size: 1.3rem; /* Ajuste encore le texte pour mobile */
+    }
+}
