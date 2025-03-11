@@ -51,78 +51,70 @@ h2 {
   margin: 20px auto 0;
 }
 
+/* ====== Styles Globaux ====== */
 body, html {
-  height: 100%; /* Assure que la page couvre toute la hauteur */
-  margin: 0;
+  height: 100%; /* Assure que la page occupe toute la hauteur */
+  margin: 0; /* Supprime les marges par défaut */
 }
 
 .legal {
   display: flex;
-  flex-direction: column;
-  min-height: 100vh; /* La page doit occuper toute la hauteur */
+  flex-direction: column; /* Organisation en colonnes */
+  min-height: 100vh; /* Assure que la page occupe toute la hauteur */
 }
 
 .legal-content {
-  flex: 1; /* Permet au contenu principal de s'étendre */
+  flex: 1; /* Permet au contenu de s'étendre */
 }
 
-.legal-section {
-  margin-bottom: 20px;
+
+.footer-legal {
+  position: absolute; /* Le positionnement absolu place le footer par rapport à son conteneur parent positionné */
+  bottom: 0; /* Fixe le footer au bas du conteneur parent */
+  left: 0; /* Positionne le footer tout à gauche */
+  width: 100%; /* Le footer occupe toute la largeur de l'écran ou du conteneur parent */
 }
 
-footer {
-  margin-top: auto;
-}
+/* ====== Media Queries ====== */
 
-/* Media Queries pour rendre la page responsive */
-@media (max-width: 1200px) {
+/* Tablettes - Entre 769px et 1024px */
+@media (min-width: 769px) and (max-width: 1024px) {
   .mentions-title {
-    font-size: 2rem;
+    font-size: 2.2rem; /* Taille réduite pour les titres */
   }
   
   .banner-bar {
-    width: 400px;
+    width: 400px; /* Ajuste la barre décorative pour tablette */
+    height: 5px; /* Réduction de la hauteur de la barre */
+    margin: 15px auto; /* Barre centrée avec moins d'espace */
+  }
+  
+  .legal-accordion {
+    margin-top: 50px; /* Réduction de l'espace au-dessus de l'accordéon */
   }
 }
 
-@media (max-width: 992px) {
-  .mentions-title {
-    font-size: 1.8rem;
-  }
-  
-  .mentions-accordion .accordion-header {
-    font-size: 1.1rem;
-  }
-  
-  .banner-bar {
-    width: 300px;
-  }
-}
-
+/* Petits écrans - Jusqu'à 768px */
 @media (max-width: 768px) {
   .mentions-title {
-    font-size: 1.6rem;
+    font-size: 1.8rem; /* Taille adaptée aux petits écrans */
   }
   
   .legal {
-    padding: 30px 10px; /* Ajuste les marges sur petit écran */
+    padding: 30px 10px; /* Réduction des marges pour petits écrans */
   }
   
   .banner-bar {
-    width: 250px;
-  }
-}
-
-@media (max-width: 576px) {
-  .mentions-title {
-    font-size: 1.4rem;
-  }
-  
-  .banner-bar {
-    width: 200px;
+    width: 300px; /* Barre plus courte pour mobile */
+    height: 4px; /* Hauteur ajustée */
+    margin: 10px auto; /* Moins d'espace autour */
   }
   
   .footer-spacing {
-    margin-top: 60px; /* Réduit l'espace au-dessus du footer sur les petits écrans */
+    margin-top: 30px; /* Moins d'espace au-dessus du footer */
+  }
+  
+  .legal-accordion {
+    margin-top: 30px; /* Réduction de l'espace entre le titre et l'accordéon */
   }
 }

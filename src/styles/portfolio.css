@@ -1,140 +1,178 @@
-/* Global styles */
+/* ====== Styles globaux ====== */
+/* Applique les styles de base au document */
 body,
 html {
   margin: 0;
   padding: 0;
   font-family: 'Nunito Sans', sans-serif;
-  background-color: #f9f9f9;
+  background-color: #f9f9f9; /* Fond gris clair */
 }
 
-
-
-
-/* Cartes de projet */
+/* ====== Styles des cartes de projet ====== */
 .project-card {
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 100%;
-  background-color: #fff;
-  border: 1px solid #ddd;
-  border-radius: 8px; /* Coins arrondis */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s, box-shadow 0.3s;
+  flex-direction: column; /* Les éléments sont empilés verticalement */
+  justify-content: space-between; /* Espace équilibré entre les éléments */
+  height: 100%; /* Hauteur complète */
+  background-color: #fff; /* Fond blanc */
+  border: 1px solid #ddd; /* Bordure grise claire */
+  border-radius: 8px; /* Coins légèrement arrondis */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ombre légère */
+  transition: transform 0.3s, box-shadow 0.3s; /* Animation douce sur les interactions */
 }
 
 .project-card:hover {
-  transform: scale(1.02);
-  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+  transform: scale(1.02); /* Légère mise en relief au survol */
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); /* Ombre plus prononcée */
 }
 
-/* Conteneur des images */
+/* Conteneur pour les images des projets */
 .project-card .position-relative {
-  height: 400px; /* Taille des images */
-  overflow: hidden;
+  height: 400px; /* Hauteur fixe pour les images */
+  overflow: hidden; /* Masque le contenu qui dépasse */
   border-radius: 8px; /* Coins arrondis */
 }
 
 .project-card img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* Image centrée sans déformation */
+  width: 100%; /* Image en pleine largeur */
+  height: 100%; /* Adapte la hauteur à celle du conteneur */
+  object-fit: cover; /* Garde les proportions sans distorsion */
 }
 
-
-/* Centrer le contenu dans le Card.Body */
+/* Contenu centré dans la section body de la carte */
 .project-card .card-body {
   display: flex;
-  flex-direction: column;
+  flex-direction: column; /* Empile les éléments verticalement */
   justify-content: center; /* Centre verticalement */
   align-items: center; /* Centre horizontalement */
 }
 
-
-/* Titres et texte */
+/* Titres et descriptions des cartes */
 .project-card .card-title {
-  font-size: 1.6rem; /* Agrandi légèrement */
-  font-weight: bold;
-  color: #333;
-  margin-bottom: 10px;
+  font-size: 1.6rem; /* Taille légèrement augmentée */
+  font-weight: bold; /* Texte en gras */
+  color: #333; /* Couleur sombre */
+  margin-bottom: 10px; /* Espacement sous le titre */
 }
 
 .project-card .card-text {
-  font-size: 1rem;
-  color: #555;
+  font-size: 1rem; /* Taille standard */
+  color: #555; /* Couleur grise pour le texte */
 }
 
-/* Bouton primaire */
+/* Bouton primaire dans la carte */
 .project-card .btn-primary {
-  background-color: #0e6efd;
-  color: #fff;
-  text-decoration: none;
-  padding: 10px 15px;
-  border-radius: 4px;
-  font-size: 1rem;
-  text-align: center;
-  display: inline-block;
-  transition: background-color 0.3s ease;
+  background-color: #0e6efd; /* Bleu dynamique */
+  color: #fff; /* Texte blanc */
+  text-decoration: none; /* Supprime le soulignement */
+  padding: 10px 15px; /* Espacement interne */
+  border-radius: 4px; /* Coins arrondis */
+  font-size: 1rem; /* Taille standard */
+  text-align: center; /* Centre le texte */
+  display: inline-block; /* Définit le bouton comme un bloc en ligne */
+  transition: background-color 0.3s ease; /* Transition fluide */
 }
 
 .project-card .btn-primary:hover {
-  background-color: #0056b3;
+  background-color: #0056b3; /* Bleu foncé au survol */
 }
 
-/* Sous-cadre pour les technologies utilisées */
+/* Section pour afficher les technologies utilisées */
 .created-with {
   background-color: #e9ecef; /* Fond gris clair */
   border-radius: 6px; /* Coins arrondis */
-  padding: 12px;
-  margin-top: 15px;
-  font-size: 0.9rem;
-  color: #555;
-  text-align: center; /* Texte centré */
-  border: 1px solid #ced4da; /* Bordure propre */
+  padding: 12px; /* Espacement interne */
+  margin-top: 15px; /* Espacement au-dessus */
+  font-size: 0.9rem; /* Taille réduite */
+  color: #555; /* Texte gris */
+  text-align: center; /* Centre le texte */
+  border: 1px solid #ced4da; /* Bordure douce */
 }
 
-/* Espacement entre les lignes */
+/* Marges de fin pour les lignes */
 .mb-4 {
-  margin-bottom: 20px;
+  margin-bottom: 20px; /* Espacement standard */
 }
+
 .mb-5 {
-  margin-bottom: 40px;
+  margin-bottom: 40px; /* Espacement plus important */
 }
 
-/* Responsiveness */
-@media (max-width: 768px) {
-  .banner-title {
-    font-size: 2.2rem;
+/* ====== Responsiveness pour tablettes (entre 769px et 1024px) ====== */
+@media (min-width: 769px) and (max-width: 1024px) {
+  /* Ajustements spécifiques pour les tablettes */
+  .project-card .card-body {
+    padding: 15px; /* Réduction légère de l'espacement interne */
   }
-  .banner-bar {
-    width: 100px;
+
+  .project-card img {
+    height: 300px; /* Hauteur ajustée pour les images sur tablettes */
   }
+
   .project-card .card-title {
-    font-size: 1.4rem;
+    margin-bottom: 10px; /* Espacement standard sous le titre */
   }
-  .project-card img {
-    height: 300px; /* Réduction pour écrans moyens */
+
+  .project-card .card-text {
+    margin-top: 10px; /* Espacement standard entre le titre et le texte */
+  }
+
+  .project-card {
+    padding: 20px; /* Espacement interne ajusté pour les cartes */
+  }
+
+  .banner-title {
+    font-size: 2.2rem; /* Taille réduite pour le titre principal */
+  }
+
+  .banner-bar {
+    width: 90%; /* Barre adaptative pour s'ajuster à l'écran */
+    max-width: 400px; /* Limite maximale pour les tablettes */
+    height: 5px; /* Hauteur ajustée */
+    margin: 15px auto; /* Centrée avec un espace réduit */
   }
 }
 
-@media (max-width: 576px) {
-  .banner {
-    padding: 30px 10px;
+/* ====== Responsiveness pour petits écrans (768px et moins) ====== */
+@media (max-width: 768px) {
+  /* Ajustements spécifiques pour les petits écrans */
+  .project-card .card-body {
+    padding: 10px; /* Réduction de l'espacement interne */
   }
-  .banner-title {
-    font-size: 1.8rem;
-  }
-  .banner-bar {
-    width: 80px;
-  }
-  .portfolio-container {
-    padding: 20px 10px;
-  }
+
   .project-card img {
-    height: 250px; /* Réduction pour petits écrans */
+    height: 250px; /* Hauteur réduite pour les images */
   }
+
+  .project-card .card-title {
+    margin-bottom: 5px; /* Réduction de l'espacement sous le titre */
+  }
+
+  .project-card .card-text {
+    margin-top: 5px; /* Réduction de l'espacement entre le titre et le texte */
+  }
+
+  .project-card {
+    padding: 35px; /* Espacement plus compact pour les petits écrans */
+  }
+
+  .banner-title {
+    font-size: 2rem; /* Taille réduite pour le titre principal */
+  }
+
+  .banner-bar {
+    width: 80%; /* Barre plus courte pour les petits écrans */
+    max-width: 300px; /* Limite maximale */
+    height: 4px; /* Hauteur réduite */
+    margin: 10px auto; /* Espacement adapté pour mobiles */
+  }
+
+  .portfolio-container {
+    padding: 15px 10px; /* Moins de marges internes */
+  }
+
   .project-card .btn-primary {
-    font-size: 0.9rem;
-    padding: 8px 12px;
+    font-size: 0.9rem; /* Taille plus petite pour les boutons */
+    padding: 8px 12px; /* Réduction des paddings des boutons */
   }
 }

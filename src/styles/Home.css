@@ -1,175 +1,231 @@
-/* Importation de la police Nunito Sans */
+/* ====== Importation des polices ====== */
+/* Importation de la police Nunito Sans depuis Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600&display=swap');
 
-/* Style global */
+/* ====== Style global ====== */
 body {
-  font-family: 'Nunito Sans', sans-serif;
-  font-weight: 400;
+  font-family: 'Nunito Sans', sans-serif; /* Définit la police principale */
+  font-weight: 400; /* Poids par défaut pour le texte */
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-weight: 600;
+  font-weight: 600; /* Poids plus épais pour les titres */
 }
 
-/* Hero Section */
+/* ====== Hero Section ====== */
+/* Configuration principale de la section d'en-tête "Hero" */
 .hero-section {
-  background-image: url('../assets/images/hero-bg.jpg');
-  background-size: cover;
-  background-position: center;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+  background-image: url('../assets/images/hero-bg.jpg'); /* Image de fond */
+  background-size: cover; /* Couvre toute la section */
+  background-position: center; /* Centre l'image */
+  height: 100vh; /* Hauteur égale à la fenêtre */
+  display: flex; /* Utilise Flexbox */
+  flex-direction: column; /* Empile verticalement les éléments */
+  justify-content: center; /* Centrage vertical */
+  align-items: center; /* Centrage horizontal */
+  text-align: center; /* Texte centré */
 }
 
 .hero-image {
-  background-color: rgba(0, 0, 0, 0.85);
-  padding: 20px 30px;
-  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.85); /* Fond noir transparent */
+  padding: 20px 30px; /* Espacement interne */
+  border-radius: 5px; /* Coins légèrement arrondis */
 }
 
 .hero-image h1 {
-  font-size: 3rem;
-  color: white;
+  font-size: 3rem; /* Taille du titre principal */
+  color: white; /* Couleur blanche */
 }
 
 .hero-image h2 {
-  font-size: 2rem;
-  color: white;
+  font-size: 2rem; /* Taille du sous-titre */
+  color: white; /* Couleur blanche */
 }
 
 .hero-image button {
-  background-color: #007bff;
-  padding: 10px 20px;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
+  background-color: #007bff; /* Couleur primaire bleue */
+  padding: 10px 20px; /* Espacement interne */
+  color: white; /* Texte blanc */
+  border: none; /* Pas de bordure */
+  border-radius: 5px; /* Coins arrondis */
+  cursor: pointer; /* Change le curseur */
 }
 
 .hero-image button:hover {
-  background-color: #0056b3;
+  background-color: #0056b3; /* Couleur plus sombre au survol */
 }
 
-/* Encadré autour des colonnes */
+/* ====== Encadré autour des colonnes ====== */
 .encadre {
-  border: 2px solid #ddd; /* Bordure de l'encadré */
-  padding: 20px; /* Espacement à l'intérieur de l'encadré */
+  border: 2px solid #ddd; /* Bordure grise autour de l'encadré */
+  padding: 20px; /* Espacement interne */
   border-radius: 10px; /* Coins arrondis */
-  background-color: #fff; /* Couleur de fond */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre pour l'encadré */
+  background-color: #fff; /* Couleur de fond blanche */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre légère */
 }
 
-/* À propos Section */
+/* ====== À propos Section ====== */
 .about-section {
-  padding: 50px 0;
-  background-color: #f9f9f9;
+  padding: 50px 0; /* Espacement vertical */
+  background-color: #f9f9f9; /* Fond gris clair */
 }
 
 .about-row {
-  display: flex;
-  align-items: stretch; /* Assure que les colonnes aient la même hauteur */
-  justify-content: space-between; /* Aligne horizontalement */
-  gap: 40px; /* Ajoute un espacement horizontal entre les colonnes */
+  display: flex; /* Flexbox pour aligner les colonnes */
+  align-items: stretch; /* Même hauteur pour les colonnes */
+  justify-content: space-between; /* Espacement uniforme entre les colonnes */
+  gap: 40px; /* Espace entre les colonnes */
 }
 
 .about-col {
-  flex: 1; /* Assure que les colonnes prennent un espace égal */
-  min-width: 280px;
-  background: white;
-  border-radius: 10px;
-  padding: 20px;
-  text-align: left; /* Aligne le texte à gauche */
+  flex: 1; /* Colonnes de tailles égales */
+  min-width: 280px; /* Largeur minimale pour éviter qu'elles soient trop étroites */
+  background: white; /* Fond blanc */
+  border-radius: 10px; /* Coins arrondis */
+  padding: 20px; /* Espacement interne */
+  text-align: left; /* Texte aligné à gauche */
 }
 
 .about-image-container {
-  margin-bottom: 20px;
+  margin-bottom: 20px; /* Espace sous l'image */
 }
 
 .about-image {
-  max-width: 100%;
+  max-width: 100%; /* Taille maximale pour s'adapter au conteneur */
 }
 
+/* Liste des compétences */
 .skills-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+  list-style: none; /* Supprime les puces */
+  padding: 0; /* Aucun retrait interne */
+  margin: 0; /* Aucun espacement externe */
 }
 
 .skills-list li {
-  margin-bottom: 15px;
-  display: flex;
-  align-items: center;
+  margin-bottom: 15px; /* Espace entre les éléments */
+  display: flex; /* Alignement horizontal */
+  align-items: center; /* Alignement vertical */
 }
 
 .skills-list strong {
-  width: 150px; /* Uniformité pour les labels */
-  text-transform: uppercase;
+  width: 150px; /* Largeur fixe pour uniformiser les labels */
+  text-transform: uppercase; /* Texte en majuscules */
 }
 
 .progress-bar {
-  border-radius: 5px;
-  height: 20px;
+  border-radius: 5px; /* Coins arrondis pour les barres de progression */
+  height: 20px; /* Hauteur des barres */
 }
 
 .progress {
-  width: 100%; /* Barre de progression pleine largeur */
-  max-width: 600px;
-  margin-left: 20px; /* Espacement entre le texte et la barre */
+  width: 100%; /* Largeur de la barre */
+  max-width: 600px; /* Largeur maximale */
+  margin-left: 20px; /* Espacement à gauche */
 }
 
 /* Couleurs spécifiques des barres */
 .progress-html .progress-bar {
-  background-color: #e63946;
+  background-color: #e63946; /* Rouge pour HTML */
 }
 
 .progress-css .progress-bar {
-  background-color: #48cae4;
+  background-color: #48cae4; /* Bleu pour CSS */
 }
 
 .progress-js .progress-bar {
-  background-color: #f4d35e;
+  background-color: #f4d35e; /* Jaune pour JavaScript */
 }
 
 .progress-php .progress-bar {
-  background-color: #1b998b;
+  background-color: #1b998b; /* Vert pour PHP */
 }
 
 .progress-react .progress-bar {
-  background-color: #0077b6;
+  background-color: #0077b6; /* Bleu pour React */
 }
 
-/* Barre sous les titres */
+/* ====== Barre sous les titres ====== */
 .section-title {
-  text-align: left;
-  margin-bottom: 40px;
-  font-weight: bold;
-  position: relative;
+  text-align: left; /* Texte aligné à gauche */
+  margin-bottom: 40px; /* Espacement sous le titre */
+  font-weight: bold; /* Gras pour plus d'importance */
+  position: relative; /* Positionnement nécessaire pour l'élément après */
 }
 
 .section-title::after {
-  content: '';
-  display: block;
-  width: 100%; /* Par défaut, occupe toute la largeur disponible */
-  max-width: 36.44rem; /* Largeur maximale (environ 583px) */
-  height: 4px;
-  background-color: #0080ff; /* Bleu plus foncé et dynamique */
-  margin-top: 10px; /* Espacement sous le titre */
-  position: absolute;
-  bottom: -10px;
-  left: 0; /* Aligne avec le début du titre */
+  content: ''; /* Barre décorative */
+  display: block; /* Affiché en tant que bloc */
+  width: 100%; /* Largeur complète */
+  max-width: 36.44rem; /* Largeur maximale */
+  height: 4px; /* Hauteur de la barre */
+  background-color: #0080ff; /* Couleur bleu foncé */
+  margin-top: 10px; /* Espacement au-dessus */
+  position: absolute; /* Position absolue pour le placement */
+  bottom: -10px; /* Décalage sous le titre */
+  left: 0; /* Alignement à gauche */
   border-radius: 2px; /* Coins arrondis */
 }
 
-/* Responsiveness */
-@media (max-width: 768px) {
-  .about-row {
-    flex-direction: column; /* Empile les colonnes sur les petits écrans */
+/* ====== Media Query : Tablettes (769px - 1024px) ====== */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .row {
+    display: flex;
+    flex-wrap: nowrap; /* Aligne les colonnes horizontalement sans retour à la ligne */
+    gap: 20px; /* Ajoute de l'espace entre les colonnes */
   }
-  
-  .section-title::after {
-    max-width: 20rem; /* Réduit la largeur pour les écrans plus petits */
+
+  .banner-title {
+    font-size: 2rem; /* Ajuste la taille du titre pour les tablettes */
+  }
+
+  .banner-bar {
+    width: 400px; /* Réduit la largeur de la barre sous le titre */
+  }
+
+  .service-title {
+    font-size: 1.4rem; /* Taille légèrement réduite pour les titres des services */
+  }
+
+  .service-card {
+    padding: 15px; /* Réduction de l'espacement interne dans les cartes */
+  }
+
+  .service-icon {
+    font-size: 1.8rem; /* Réduction de la taille des icônes */
+    margin-bottom: 40px; /* Réduction de l'espacement sous les icônes */
+  }
+}
+
+/* ====== Media Query : Petits écrans (max-width : 768px) ====== */
+@media (max-width: 768px) {
+  .row {
+    flex-direction: column; /* Les colonnes sont empilées verticalement */
+    gap: 10px; /* Espace réduit entre les colonnes */
+  }
+
+  .banner {
+    margin-bottom: 100px; /* Réduction de l'espacement sous la bannière */
+  }
+
+  .banner-title {
+    font-size: 1.6rem; /* Taille réduite pour le titre de la bannière */
+  }
+
+  .banner-bar {
+    width: 250px; /* Barre plus courte pour les petits écrans */
+  }
+
+  .service-card {
+    margin-bottom: 20px; /* Espacement sous les cartes */
+    padding: 10px; /* Réduction des marges internes */
+  }
+
+  .service-title {
+    font-size: 1.2rem; /* Réduction de la taille des titres */
+  }
+
+  .service-icon {
+    font-size: 1.5rem; /* Icônes plus petites */
+    margin-bottom: 30px; /* Moins d'espace sous les icônes */
   }
 }

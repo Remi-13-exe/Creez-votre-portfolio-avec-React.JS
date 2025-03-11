@@ -1,135 +1,176 @@
+/* ===================================
+   Header - Styles de Base
+==================================== */
+
 /* Style de base pour le header */
 .header {
-  background-color: black;
-  color: white;
-  padding: 10px 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  background-color: black; /* Fond noir pour le header */
+  color: white;            /* Texte blanc */
+  padding: 10px 0;         /* Espacement vertical */
+  display: flex;           /* Utilisation de Flexbox pour aligner les éléments */
+  justify-content: space-between; /* Espace entre la partie gauche (logo) et droite (menu) */
+  align-items: center;     /* Alignement vertical centré */
 }
 
+/* Conteneur interne du header */
 .header .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
+  width: 100%;             /* Occupe toute la largeur disponible */
 }
 
-/* Logo */
+/* ===================================
+   Logo
+==================================== */
+
+/* Style du logo */
 .header-left .logo {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: white;
-  text-decoration: none;
+  font-size: 1.5rem;       /* Taille de police du logo */
+  font-weight: bold;       /* Texte en gras */
+  color: white;            /* Couleur blanche */
+  text-decoration: none;   /* Aucun soulignement */
 }
 
-/* Menu Burger */
+/* ===================================
+   Menu Burger pour Mobile
+==================================== */
+
+/* Bouton du menu burger (invisible par défaut, affiché en mobile via media query) */
 .burger-menu {
-  display: none;
+  display: none;           /* Caché par défaut */
   background: none;
   border: none;
   flex-direction: column;
   cursor: pointer;
-  padding: 5px;
+  padding: 5px;            /* Zone cliquable */
 }
 
+/* Les trois lignes du burger menu */
 .burger-icon {
-  width: 30px;
-  height: 5px;
-  background-color: white;
-  margin: 5px 0;
+  width: 30px;             /* Largeur des lignes */
+  height: 5px;             /* Hauteur des lignes */
+  background-color: white; /* Couleur blanche */
+  margin: 5px 0;           /* Espacement vertical entre les lignes */
 }
 
-/* Menu de navigation */
+/* ===================================
+   Menu de navigation
+==================================== */
+
+/* Conteneur de la navigation (affiché par défaut en mode desktop) */
 .nav {
   display: flex;
   justify-content: space-between;
 }
 
+/* Liste de navigation (les liens du menu) */
 .nav-list {
-  list-style: none;
-  display: flex;
-  gap: 23px;
+  list-style: none;        /* Pas de puces */
+  display: flex;           /* Affichage en ligne */
+  gap: 23px;               /* Espacement entre les éléments */
   margin: 0;
   padding: 0;
 }
 
+/* Style de base pour les liens de navigation */
 .nav-list li a {
-  color: white;
-  text-decoration: none;
-  padding-bottom: 2px;
-  border-bottom: 2px solid transparent;
-  transition: color 0.3s ease, border-bottom 0.3s ease;
+  color: white;            /* Couleur du texte */
+  text-decoration: none;   /* Pas de soulignement par défaut */
+  padding-bottom: 2px;      /* Espace pour créer un effet de soulignement */
+  border-bottom: 2px solid transparent; /* Soulignement transparent par défaut */
+  transition: color 0.3s ease, border-bottom 0.3s ease; /* Transition douce pour le survol */
 }
 
+/* Effet au survol : soulignement visible et changement de couleur */
 .nav-list li a:hover {
-  color: #00bcd4;
-  border-bottom: 2px solid #00bcd4;
+  color: #ffffff;          /* Changement de couleur au survol */
+  border-bottom: 2px solid #ffffff; /* Affichage d’un soulignement bleu */
 }
 
-/* Quand le menu est ouvert sur mobile */
+/* Lien actif : le lien en cours est mis en évidence en gras et souligné */
+.nav-list li a.active {
+  font-weight: bold;                /* Met le lien en gras */
+  border-bottom: 2px solid #ffffff;   /* Soulignement bleu indiquant l'état actif */
+}
+
+
+/* ===================================
+   Affichage du menu mobile
+==================================== */
+
+/* Quand le menu est ouvert sur mobile, la navigation s'affiche en bloc */
 .nav.open {
   display: block;
 }
 
+/* Sur mobile, chaque élément de la liste a un margin vertical */
 .nav-list li {
   margin: 10px 0;
 }
 
-/* Styles pour tablette et mobile */
-@media (max-width: 1024px) {
+/* ===================================
+   Media Queries (Responsive)
+==================================== */
+
+/* Pour les tablettes : c'est-à-dire pour les écrans entre 769px et 1024px */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .header .container {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 10px;           /* Réduction de l'espacement inter-éléments */
+  }
+
+  /* Réduction légère de la taille du logo pour tablette */
+  .header-left .logo {
+    font-size: 1.4rem;
+  }
+
+  /* Réduction de l'espacement dans la liste de navigation */
+  .nav-list {
+    gap: 15px;
+  }
+
+  /* Optionnel : ajustement de la partie droite */
   .header-right {
     display: flex;
     align-items: center;
   }
 }
 
+/* Pour les petits écrans : c'est-à-dire pour les écrans de 768px et moins */
 @media (max-width: 768px) {
-  /* Cacher le menu de navigation sur mobile et afficher le burger */
+  /* Cacher la navigation par défaut sur mobile */
   .nav {
     display: none;
   }
 
+  /* Afficher le menu burger */
   .burger-menu {
-    display: flex; /* Affiche le burger menu */
+    display: flex;
   }
 
-  /* Quand le menu est ouvert */
+  /* Quand le menu mobile est ouvert, afficher la navigation */
   .nav.open {
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
-    background-color: black;
-    padding: 20px;
-    z-index: 999;
+    background-color: black; /* Fond noir pour le menu */
+    padding: 20px;           /* Espacement interne pour le menu mobile */
+    z-index: 999;            /* S'assurer que le menu se place au-dessus des autres éléments */
     display: block;
   }
 
+  /* Réorganiser la liste de navigation en colonne pour mobile */
   .nav-list {
     flex-direction: column;
     gap: 10px;
     text-align: center;
   }
 
+  /* Taille des liens de navigation ajustée pour mobile */
   .nav-list li a {
     font-size: 1.2rem;
-  }
-}
-
-/* Pour les tablettes, un peu plus compressé */
-@media (max-width: 1024px) {
-  .header .container {
-    flex-direction: row;
-    justify-content: space-between;
-    gap: 10px;
-  }
-
-  .header-left .logo {
-    font-size: 1.4rem;
-  }
-
-  .nav-list {
-    gap: 15px;
   }
 }

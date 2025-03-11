@@ -1,172 +1,161 @@
-
-  
-  .banner-title {
+/* ====== Styles généraux ====== */
+.banner-title {
     font-size: 2.8rem;
     font-weight: bold;
-    margin-bottom: 10px;
+    margin-bottom: 10px; /* Espacement sous le titre */
   }
   
   .banner-bar {
     width: 560px;
     height: 6px;
-    background-color: #0e6efd;
-    margin: 15px auto 0;
+    background-color: #0e6efd; /* Couleur bleue dynamique */
+    margin: 15px auto 0; /* Barre centrée */
   }
-
-
-  /* Espacement spécifique après la banner-bar */
-.contact-form .banner-bar,
-.contact-info .banner-bar {
-  margin: 20px 0; /* Espace vertical (10px en haut et en bas) */
-  margin-bottom: 60px;
-  height: 5px;
-
-}
+  
+  /* ====== Espacement pour les barres sous la bannière ====== */
+  .contact-form .banner-bar,
+  .contact-info .banner-bar {
+    margin: 20px 0; /* Espacement vertical */
+    margin-bottom: 60px;
+    height: 5px; /* Hauteur de la barre */
+  }
   
   .banner p {
     font-size: 1.2rem;
-    margin-top: 10px;
+    margin-top: 10px; /* Espacement supérieur pour le texte */
   }
   
-  /* Conteneur principal */
-/* Conteneur principal avec ombre */
-/* Conteneur principal avec une ombre plus expressive */
-.contact-container {
-    padding: 40px 15px;
+  /* ====== Conteneur principal ====== */
+  .contact-container {
+    padding: 40px 15px; /* Espacement interne */
     background: #ffffff; /* Fond blanc */
     border-radius: 8px; /* Coins arrondis */
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Ombre plus marquée */
     margin-bottom: 50px; /* Espacement avec le footer */
   }
- 
-  /* Formulaire */
+  
+  /* ====== Formulaire de contact ====== */
   .contact-form h2 {
-    margin-bottom: 20px;
-    font-size: 1.8rem;
-    color: #333;
+    margin-bottom: 20px; /* Espacement sous le titre */
+    font-size: 1.8rem; /* Taille du texte */
+    color: #333; /* Couleur sombre */
   }
   
   .contact-form label {
     font-weight: bold;
-    color: #555;
+    color: #555; /* Texte gris */
   }
   
   .contact-form .form-control {
     margin-bottom: 15px;
-    border-radius: 6px;
+    border-radius: 6px; /* Coins arrondis pour les champs */
   }
   
-  /* Coordonnées */
+  /* ====== Coordonnées ====== */
   .contact-info h2 {
-    margin-bottom: 20px;
-    font-size: 1.8rem;
-    color: #333;
+    margin-bottom: 20px; /* Espacement sous le titre */
+    font-size: 1.8rem; /* Taille du texte */
+    color: #333; /* Texte sombre */
   }
   
   .contact-info p {
-    margin: 5px 0;
-    font-size: 1rem;
-    color: #555;
+    margin: 5px 0; /* Espacement vertical pour les paragraphes */
+    font-size: 1rem; /* Taille du texte */
+    color: #555; /* Couleur grise */
   }
   
   .map-container iframe {
-    margin-top: 15px;
-    border-radius: 6px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 15px; /* Espacement au-dessus de la carte */
+    border-radius: 6px; /* Coins arrondis */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Légère ombre */
   }
   
-
-
-   
-  /* Footer espacé du conteneur */
+  /* ====== Footer espacé ====== */
   footer {
-    margin-top: 20px; /* Ajout d’un espace pour la lisibilité */
+    margin-top: 20px; /* Espacement avec le conteneur */
   }
   
+  /* Icônes dans les coordonnées */
   .contact-info p {
     display: flex;
-    align-items: center;
+    align-items: center; /* Alignement vertical des icônes */
     margin: 10px 0;
-    font-size: 1rem;
-    color: #333; /* Couleur du texte */
+    font-size: 1rem; /* Taille du texte */
+    color: #333; /* Couleur sombre */
   }
   
   .contact-info .icon {
-    margin-right: 10px; /* Espace entre l'icône et le texte */
-    color: bl; /* Couleur bleue pour les icônes */
+    margin-right: 10px; /* Espacement entre l'icône et le texte */
+    color: #0e6efd; /* Couleur bleue pour les icônes */
   }
   
-
-
-/* Tablette - Résolutions entre 768px et 1024px */
-@media (max-width: 1024px) {
+  /* ====== Responsiveness ====== */
+  /* Tablettes - Écrans entre 768px et 1024px */
+  @media (max-width: 1024px) {
     .banner-title {
       font-size: 2.4rem; /* Réduction de la taille des titres */
     }
   
     .banner-bar {
       width: 100%; /* Barre adaptative */
-      max-width: 400px; /* Limite maximale pour tablette */
+      max-width: 400px; /* Limite maximale */
       height: 5px; /* Hauteur ajustée */
       margin: 15px auto; /* Barre centrée */
     }
   
     .contact-container {
       padding: 30px 10px; /* Réduction des marges internes */
-      margin-bottom: 40px; /* Moins d'espacement au bas */
+      margin-bottom: 40px; /* Réduction de l'espace */
     }
   
     .contact-form h2,
     .contact-info h2 {
-      font-size: 1.5rem; /* Taille réduite des sous-titres */
+      font-size: 1.5rem; /* Taille réduite pour les sous-titres */
     }
   
     .contact-info p {
-      font-size: 0.95rem; /* Réduction de la taille du texte pour les coordonnées */
+      font-size: 0.95rem; /* Texte plus compact */
     }
   
     .map-container iframe {
-      height: 300px; /* Hauteur ajustée pour la carte Google Maps */
+      height: 300px; /* Hauteur ajustée pour tablette */
     }
-}
-
-/* Téléphone - Résolutions inférieures à 768px */
-@media (max-width: 768px) {
+  }
+  
+  /* Téléphones - Écrans jusqu'à 768px */
+  @media (max-width: 768px) {
     .banner-title {
-      font-size: 2rem; /* Réduction encore plus importante pour les titres */
+      font-size: 2rem; /* Taille réduite pour les téléphones */
     }
   
     .banner-bar {
-      width: 100%; /* Prend toute la largeur disponible */
-      height: 4px; /* Hauteur réduite pour mobile */
-      margin: 10px auto; /* Espace plus étroit pour les barres */
+      width: 100%; /* Prend toute la largeur */
+      height: 4px; /* Hauteur réduite */
+      margin: 10px auto; /* Moins d'espacement */
     }
   
-
     .contact-form .banner-bar,
     .contact-info .banner-bar {
-        
-    max-width: 100%;
-    height: 3px; /* Hauteur réduite pour mobile */
-
+      max-width: 100%;
+      height: 3px; /* Barre plus fine pour mobiles */
     }
-
-
+  
     .contact-container {
-      padding: 20px 10px; /* Moins de padding interne pour économiser de l'espace */
-      margin-bottom: 30px; /* Réduction de la marge au bas */
+      padding: 20px 10px; /* Réduction des marges internes */
+      margin-bottom: 30px; /* Réduction de l'espacement sous le conteneur */
     }
   
     .contact-form h2,
     .contact-info h2 {
-      font-size: 1.3rem; /* Sous-titres adaptés à la taille de l'écran */
+      font-size: 1.3rem; /* Taille adaptée pour les petits écrans */
     }
   
     .contact-info p {
-      font-size: 0.9rem; /* Texte encore plus compact pour téléphone */
+      font-size: 0.9rem; /* Texte plus compact */
     }
   
     .map-container iframe {
-      height: 250px; /* Hauteur réduite encore davantage */
+      height: 250px; /* Hauteur réduite pour les téléphones */
     }
-}
+  }
+  

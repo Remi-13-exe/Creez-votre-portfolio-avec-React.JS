@@ -1,184 +1,171 @@
-/* styles/services.css */
-.service-card:hover {
-  background-color: #efefef;
-  box-shadow: 0 8px 10px rgba(0, 0, 0, 0.2);
+/* ====== Importation et Police ====== */
+/* Les styles globaux pour définir les polices et les composants */
+.services {
+  font-family: 'Nunito Sans', sans-serif; /* Police principale */
 }
 
+/* ====== Styles des cartes de services ====== */
 .service-card {
-  flex: 1;
+  flex: 1; /* Prend tout l'espace disponible */
   display: flex;
-  flex-direction: column;
-  justify-content: center; /* Centre verticalement tous les éléments */
-  align-items: center; /* Centre horizontalement tous les éléments */
-  border: 1px solid #eee; /* Éclaircir les bordures */
-  padding: 20px;
+  flex-direction: column; /* Colonne pour empiler les éléments */
+  justify-content: center; /* Centrage vertical */
+  align-items: center; /* Centrage horizontal */
+  border:2px solid #dbdadad1; /* Bordure claire */
+  padding: 20px; /* Espacement interne */
+}
+
+.service-card:hover {
+  background-color: #efefef; /* Couleur de fond claire au survol */
+  box-shadow: 0 8px 10px rgba(0, 0, 0, 0.2); /* Ombre plus prononcée au survol */
 }
 
 .service-icon {
-  color: #0e6efd; /* Couleur bleue dynamique */
+  color: #0e6efd; /* Couleur bleue vive */
   margin-bottom: 50px; /* Espacement sous l'icône */
-  font-size: 2rem; /* Taille ajustée pour rendre les icônes moins grasses */
-  display: block;
-  margin-left: auto;
+  font-size: 2rem; /* Taille des icônes */
+  display: block; /* Affiche l'élément en bloc */
+  margin-left: auto; /* Centrer horizontalement */
   margin-right: auto;
 }
 
 .service-title {
   text-align: center; /* Centre le titre */
-  margin: 10px 0; /* Ajoute un peu d'espace au-dessus et en dessous */
+  margin: 10px 0; /* Espacement au-dessus et au-dessous du titre */
+  font-size: 1.5rem; /* Taille de la police */
+  color: #000; /* Couleur noire */
+  font-weight: bold; /* Titre en gras */
+}
+
+.service-column {
+  text-align: center; /* Alignement centré */
+  padding: 35px; /* Espacement interne */
+  border: 4px solid #ddd; /* Bordure claire */
+  border-radius: 8px; /* Coins arrondis */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ombre légère */
+  background-color: #fff; /* Fond blanc */
+  flex: 1; /* Colonnes égales */
+  min-width: 280px; /* Largeur minimale */
 }
 
 .service-column p {
-  text-align: center; /* Centre les paragraphes */
+  font-size: 1rem; /* Taille de la police */
+  color: #555; /* Couleur grise */
 }
 
-/* Ajouter des règles de style pour garantir l'alignement horizontal */
-@media (min-width: 768px) {
-  .row {
-    display: flex;
-    flex-wrap: nowrap;
-    gap: 15px; /* Rapprocher les colonnes */
-  }
-
-  .service-card {
-    margin: 10px;
-  }
-}
-
-/* Autres règles de style déjà présentes */
-.services {
-  font-family: 'Nunito Sans', sans-serif;
-}
-
+/* ====== Bannière ====== */
 .banner {
-  position: relative;
-  text-align: center;
-  margin-bottom: 180px; /* Espace entre l'image et le contenu */
+  position: relative; /* Position pour le superposer au contenu */
+  text-align: center; /* Texte centré */
+  margin-bottom: 180px; /* Espacement sous la bannière */
 }
 
 .banner-image {
-  width: 100%;
-  height: auto;
+  width: 100%; /* Image pleine largeur */
+  height: auto; /* Hauteur dynamique */
 }
 
 .banner-title {
   font-size: 2.5rem; /* Taille du titre */
   color: #000; /* Couleur noire */
-  margin-top: 60px; /* Ajoute un peu d'espace avec l'image */
-  text-align: center; /* Centre le texte */
-  font-weight: bold; /* Texte très gras */
+  margin-top: 60px; /* Espacement au-dessus du texte */
+  text-align: center; /* Texte centré */
+  font-weight: bold; /* Gras pour donner de l'importance */
 }
 
 .banner p {
-  font-size: 1rem;
-  color: #555;
-  margin-bottom: 55px;
+  font-size: 1rem; /* Taille de police */
+  color: #555; /* Couleur grise */
+  margin-bottom: 55px; /* Espacement sous le texte */
 }
 
 .banner-bar {
   width: 560px; /* Largeur de la barre */
   height: 6px; /* Hauteur de la barre */
-  background-color: #0e6efd; /* Couleur bleue dynamique */
-  margin: 20px auto 0; /* Centre horizontalement et ajoute un peu d'espace en haut */
+  background-color: #0e6efd; /* Couleur bleue */
+  margin: 20px auto 0; /* Centrage horizontal */
 }
 
+/* ====== Container des services ====== */
 .services-container {
-  padding: 70px 10px;
+  padding: 70px 10px; /* Espacement autour du container */
 }
 
-.service-column {
-  text-align: center;
-  padding: 35px;
-  border: 2px solid #ddd;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  background-color: #fff;
-  flex: 1; /* Assure que les colonnes prennent un espace égal */
-  min-width: 280px; /* Assure qu'elles ne deviennent pas trop petites sur des écrans étroits */
-}
+/* ====== Responsiveness pour différentes tailles d'écran ====== */
 
-.service-title {
-  font-size: 1.5rem;
-  margin-bottom: 10px;
-  color: #000; /* Couleur noire */
-  font-weight: bold;
-}
-
-.service-column p {
-  font-size: 1rem;
-  color: #555;
-}
-
-/* Responsiveness */
+/* Écrans jusqu'à 1200px */
 @media (max-width: 1200px) {
   .banner-title {
-    font-size: 2rem;
+    font-size: 2rem; /* Taille du titre ajustée */
   }
-  
+
   .banner-bar {
-    width: 400px;
+    width: 400px; /* Largeur réduite */
   }
 
   .service-title {
-    font-size: 1.4rem;
+    font-size: 1.4rem; /* Taille réduite des titres */
   }
 }
 
+/* Écrans jusqu'à 992px */
 @media (max-width: 992px) {
   .banner-title {
-    font-size: 1.8rem;
+    font-size: 1.8rem; /* Taille plus petite pour le titre */
   }
 
   .banner-bar {
-    width: 300px;
+    width: 300px; /* Réduit encore la largeur */
   }
 
   .service-title {
-    font-size: 1.3rem;
+    font-size: 1.3rem; /* Taille ajustée des titres */
   }
 }
 
+/* Écrans jusqu'à 768px (petits appareils) */
 @media (max-width: 768px) {
   .banner {
-    margin-bottom: 100px;
+    margin-bottom: 100px; /* Réduction de l'espacement */
   }
 
   .banner-title {
-    font-size: 1.6rem;
+    font-size: 1.6rem; /* Titre plus petit */
   }
 
   .banner-bar {
-    width: 250px;
+    width: 250px; /* Barre plus courte */
   }
 
   .service-title {
-    font-size: 1.2rem;
+    font-size: 1.2rem; /* Taille du titre réduite */
   }
 
   .row {
-    flex-direction: column;
-    gap: 10px;
+    flex-direction: column; /* Empilement des colonnes */
+    gap: 10px; /* Réduction des espaces entre les colonnes */
   }
 
   .service-column {
-    margin-bottom: 20px;
+    margin-bottom: 20px; /* Espacement sous chaque colonne */
   }
 }
 
+/* Écrans jusqu'à 576px (très petits appareils) */
 @media (max-width: 576px) {
   .banner-title {
-    font-size: 1.4rem;
+    font-size: 1.4rem; /* Taille très petite pour le titre */
   }
 
   .banner-bar {
-    width: 200px;
+    width: 200px; /* Réduction de la largeur de la barre */
   }
 
   .service-title {
-    font-size: 1.1rem;
+    font-size: 1.1rem; /* Taille réduite pour les titres */
   }
 
   .service-column {
-    margin-bottom: 20px;
+    margin-bottom: 20px; /* Espacement maintenu sous chaque colonne */
   }
 }

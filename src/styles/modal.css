@@ -1,99 +1,100 @@
-/* Thème sombre */
+/* ====== Thème sombre pour le modal ====== */
 .dark-modal .modal-content {
-    background-color: #1c1c1c;
-    color: #d3d3d3;
-    border-radius: 8px;
+    background-color: #1c1c1c; /* Fond sombre pour un style élégant */
+    color: #d3d3d3; /* Texte clair pour un bon contraste */
+    border-radius: 8px; /* Coins arrondis pour un effet doux */
 }
 
-/* Conteneur des colonnes */
+/* ====== Conteneur des colonnes ====== */
 .github-modal-content {
-    display: flex;
-    align-items: center;
-    gap: 20px; /* Espace entre les colonnes */
-    flex-wrap: wrap; /* Permet à la photo et au texte de se superposer en responsive */
+    display: flex; /* Organisation en colonnes (photo + infos) */
+    align-items: center; /* Centre verticalement les éléments */
+    gap: 20px; /* Espace horizontal entre la photo et les informations */
+    flex-wrap: wrap; /* Permet aux colonnes de se réorganiser sur petits écrans */
 }
 
-/* Colonne gauche : Photo de profil */
+/* ====== Colonne gauche : Photo de profil ====== */
 .github-avatar-wrapper {
-    flex: 1;
-    display: flex;
-    justify-content: center;
+    flex: 1; /* La photo occupe un espace proportionnel à son contenu */
+    display: flex; /* Utilise flexbox pour centrer la photo */
+    justify-content: center; /* Centre horizontalement la photo */
 }
 
 .github-avatar {
-    width: 150px; /* Agrandit la photo */
-    height: 150px; /* Agrandit la photo */
-    border-radius: 50%;
-    border: 3px solid #444;
+    width: 150px; /* Taille de la photo */
+    height: 150px; /* Taille de la photo */
+    border-radius: 50%; /* Photo en cercle */
+    border: 3px solid #444; /* Bordure sombre autour de la photo */
 }
 
-/* Colonne droite : Informations */
+/* ====== Colonne droite : Informations ====== */
 .github-info-wrapper {
-    flex: 2;
+    flex: 2; /* La colonne d'informations prend plus d'espace que la photo */
 }
 
 .github-info-wrapper h3 {
-    font-size: 1.6rem; /* Ajustement de la taille des titres */
-    margin-bottom: 10px;
+    font-size: 1.6rem; /* Taille des titres */
+    margin-bottom: 10px; /* Espacement sous le titre */
 }
 
+/* Lien vers le profil GitHub */
 .github-link {
-    display: inline-block;
-    margin-top: 15px;
-    padding: 10px 20px;
-    background-color: #444;
-    color: #d3d3d3;
-    text-decoration: none;
-    border-radius: 4px;
+    display: inline-block; /* Bloc en ligne pour un bouton-like */
+    margin-top: 15px; /* Espacement au-dessus du lien */
+    padding: 10px 20px; /* Espacement interne pour le bouton */
+    background-color: #444; /* Couleur de fond du bouton */
+    color: #d3d3d3; /* Couleur du texte du bouton */
+    text-decoration: none; /* Supprime le soulignement du lien */
+    border-radius: 4px; /* Coins arrondis pour le bouton */
 }
 
 .github-link:hover {
-    background-color: #333;
-    text-decoration: none;
+    background-color: #333; /* Couleur plus sombre au survol */
+    text-decoration: none; /* Maintient l'absence de soulignement */
 }
 
-/* Responsive : styles pour tablette */
+/* ====== Responsive pour les tablettes ====== */
 @media (max-width: 1024px) {
     .github-modal-content {
-        flex-direction: row; /* Colonne gauche et droite restent côte à côte */
-        gap: 15px; /* Espacement plus réduit entre la photo et les infos */
+        flex-direction: row; /* Les colonnes restent côte à côte */
+        gap: 15px; /* Réduction de l'espace entre photo et infos */
     }
 
     .github-avatar {
-        width: 180px; /* Agrandit encore la photo pour tablette */
+        width: 180px; /* Taille plus grande de la photo sur tablette */
         height: 180px;
     }
 
     .github-info-wrapper h3 {
-        font-size: 1.4rem; /* Réduction légère du texte pour tablette */
+        font-size: 1.4rem; /* Taille réduite du texte pour s'adapter */
     }
 
     .github-link {
-        padding: 8px 18px; /* Ajuste les dimensions du bouton */
+        padding: 8px 18px; /* Dimensions ajustées du bouton pour tablette */
     }
 }
 
-/* Responsive : photo superposée en mode mobile */
+/* ====== Responsive pour les petits écrans (mobile) ====== */
 @media (max-width: 768px) {
     .github-modal-content {
-        flex-direction: column; /* Passe en mode colonne */
-        text-align: center;
+        flex-direction: column; /* Les colonnes passent en mode colonne */
+        text-align: center; /* Centre le texte */
     }
 
     .github-avatar-wrapper {
-        margin-bottom: 15px; /* Espace entre la photo et le texte */
+        margin-bottom: 15px; /* Espace entre la photo et les infos */
     }
 
     .github-avatar {
-        width: 140px; /* Taille réduite pour mobile */
+        width: 140px; /* Taille réduite de la photo pour mobile */
         height: 140px;
     }
 
     .github-info-wrapper {
-        text-align: center;
+        text-align: center; /* Centre les informations */
     }
 
     .github-info-wrapper h3 {
-        font-size: 1.3rem; /* Ajuste encore le texte pour mobile */
+        font-size: 1.3rem; /* Taille du texte encore réduite pour mobile */
     }
 }
